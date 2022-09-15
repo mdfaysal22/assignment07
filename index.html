@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Speed Monster</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/7087213ae2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header-side">
+        <div class="row gy-2">
+          <a type="button" class="btn btn-secondary" title="Click and Go To Home Page." href="./index.html"><i class="fa-solid fa-house-user text-light"></i></a>
+          <a type="button" class="btn btn-secondary" title="CLick and Go to Blog Page." href="./assets/blog.html"><i class="fa-solid fa-file-lines text-light"></i></a>
+         
+        </div>
+      </div>
+    </header>
+
+    <h1 class="title"><img src="./logo.png" /></h1>
+    <div id="show-time">0 seconds</div>
+
+    <div class="box-container">
+      <div id="question"></div>
+
+      <div id="display" class="inactive"></div>
+
+      <div class="buttons">
+        <button id="starts">START</button>
+      </div>
+
+      <div class="divider-container">
+        <div class="line"></div>
+        <h1 class="title2">History</h1>
+        <div class="line"></div>
+      </div>
+      <div id="histories"></div>
+    </div>
+
+    <div id="countdown"></div>
+    <div id="modal-background" class="hidden"></div>
+    <div id="result" class="hidden"></div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./history.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

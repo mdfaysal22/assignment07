@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <script src="https://kit.fontawesome.com/7087213ae2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+    <header>
+        <div class="header-side">
+          <div class="row gy-2">
+              <a type="button" class="btn btn-secondary" title="Click and Go To Home Page." href="../index.html"><i class="fa-solid fa-house-user text-light"></i></a>
+            <a type="button" class="btn btn-secondary" title="CLick and Go to Blog Page." href="./blog.html"><i class="fa-solid fa-file-lines text-light"></i></a>
+           
+          </div>
+        </div>
+      </header>
+
+    <header>
+        <div class="container">
+            <div class="display-4 my-5 text-light text-center">Wellcome To Our Blog Page.</div>
+        </div>
+    </header>
+
+    <section class="text-light">
+        <div class="container container-fluid">
+            <div class="post my-4">
+                <div class="my-5">
+                    <h2>01. What is difference between Local Storage and Session Storage ?</h2>
+                </div>
+                <div class="post-img">
+                    <img src="./blog-img/localVsSession.jpg" alt="" class="img-fluid">
+                </div>
+    
+                <div class="post-body my-5">
+                    <h4>Local Storage: </h4>
+                    <ul>
+                        <li>Local storage works, appears, and similar to session storage. For instance, just like Session storage, local storage can also store data ranging between 5mb - 10mb depending upon a browser's implementation.</li>
+                        <li>
+                            <b>Data Persistence : </b>Unlike session storage where data is automatically deleted when a browser tab or window is closed, data in local storage has no default expiry. It's only deleted if you manually delete that data from the local storage either directly, via browser settings, or through your JavaScript code.
+                        </li>
+                        <li>
+                            <b>Using Local Storage: </b>
+                            You can add and retrieve data from local storage in the same way you perform those operations with session storage. The only change is now you'll have to use the localStorage object to perform these operations instead.
+                        </li>
+                    </ul>
+    
+                    <!-- Session Storage: -->
+                    <h4>Session Storage: </h4>
+    
+                    <ul>
+                        <li>
+                            Session storage can store data ranging between 5mb - 10mb. The exact amount of storage capacity varies as per each browser's implementation, but it's a lot more than 4kb of storage capacity cookies offer!
+                        </li>
+                        <li>
+                            <b>Data Persistence: </b>As the name suggests, session storage only persists the data as long as a browser tab is opened. This means that each time you open a new tab or a new browser window, a new session storage is created. So any data you store inside the session storage will automatically get deleted when you close that tab/window.
+                        </li>
+                        <li>
+                            <b>Using Session Storage: </b>This would return the length of the session storage along with an object representing the data that's currently present inside. Since it's empty to begin with, the length is 0. Note that you may directly access the sessionStorage object as well.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="post mb-4">
+                <div class="mb-4">
+                    <h2>02. What is difference between Global Scope and Block Scope in JS ?</h2>
+                </div>
+                <div class="post-img mb-4">
+                    <img src="./blog-img/Global Scope.png" alt="">
+                </div>
+                <div class="post-body">
+                    <h4>Global Scope: </h4>
+                    <ul>
+                        <li>The variables defined outside of any function or curly brackets are known as global variables and have global scope. Global scope means that the variables can be accessed from any part of that program, any function or conditional state can access that variable.</li>
+                        <li><b>For Exmaple: </b> 
+                            <pre>
+                                
+                                    
+                                var name = "myVar";
+                               
+                                function printName(){ 
+                                 // the variable can be accessed inside here 
+                                console.log("This tutorial is by myVar"); 
+                                } 
+                                printName();
+                                
+                            </pre>
+                        </li>
+                    </ul>
+
+                    <!-- Block Scope -->
+                    <h4>Block Scope: </h4>
+
+                    <ul>
+                        <li>
+                            Block scope is also a sub-type of local scope. The block scope can be defined as the scope of the variables inside the curly brackets {}. Now, these curly brackets can be of loops, or conditional statements, or something else. You are only allowed to refer to these variables from within the curly brackets {}.
+                        </li>
+                        <li>
+                            <pre>
+                                { 
+                                    let a = 10; 
+                                    const b = 5;
+                                  }
+                            </pre>
+                            
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="post my-4">
+                <div>
+                    <h2>03. How To Work JS Event Loop? </h2>
+                </div>
+                <div class="post-img">
+                    <img src="./blog-img/eventLoop.png" alt="">
+                </div>
+                <div class="post-body">
+                    <h4>The Event Loop has one simple job — to monitor the Call Stack and the Callback Queue. If the Call Stack is empty, the Event Loop will take the first event from the queue and will push it to the Call Stack, which effectively runs it.</h4>
+                </div>
+            </div>
+            <div class="post my-4">
+                <div>
+                    <h2>04. How many way to gat JavaScript undefined Value ? </h2>
+                </div>
+                <div class="post-img">
+                    <img src="./blog-img/undefined.png" alt="">
+                </div>
+                <div class="post-body">
+                    <h4 class="my-4">There are 8 ways to get Undefined Value in JavaScript.</h4>
+                    <ul>
+                        <li>01. Variable that is not initialize will give undifined. </li>
+                        <li>02. When we cann't return Function with give undefined.</li>   
+                         <li>03. When funtion parameter that is not passed will be Undefined. </li>
+                        <li>04. If return has nothing on the right side will return Undefined.</li>     
+                        <li>05. Property that doesn't no existing on an Object will give you undefined. </li>    
+                        <li>06.Accessing array elements outsite of the index range.</li>    
+                        <li>07.Deleting an Element insite an array.</li>    
+                        <li> 08.Set a value directly to undefined.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
